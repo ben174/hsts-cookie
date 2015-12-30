@@ -1,10 +1,11 @@
-# hsts-cookie
+# HSTS Super Cookie
+#### Proof of Concept - Created by Ben Friedland
+##### http://www.bugben.com
+
 Creates a HSTS Supercookie to fingerprint a browser
 
 This is a proof of concept self-hosted application which will lay a "super cookie"
 using the HSTS web standard. 
-
-Created by Ben Friedland - http://www.bugben.com
 
 ## How it works
 
