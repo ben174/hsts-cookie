@@ -59,7 +59,7 @@ var hsts = {
         console.log(hsts.tokenBin);
         console.log(hsts.tokenBin);
         console.log(hsts.tokenHex);
-    }
+    },
 
     httpGet: function(url) {
         var xmlHttp = new XMLHttpRequest();
