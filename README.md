@@ -4,8 +4,7 @@ Creates a HSTS Supercookie to fingerprint a browser
 This is a proof of concept self-hosted application which will lay a "super cookie"
 using the HSTS web standard. 
 
-Created by Ben Friedland
-http://www.bugben.com
+Created by Ben Friedland - http://www.bugben.com
 
 ## How it works
 
@@ -52,7 +51,7 @@ into a integer again, and bam - I've retrieved your fingerprint.
 
 **Firefox** - Not super reliable, doesn't transfer to incognito.
 
-**Safari** - Especially scary - since the HSTS information is actually persisted to your iCloud device
-and therefore is *retained across devices*.
+**Safari** - Especially scary - since the HSTS information is actually persisted to your iCloud account
+and is therefore *retained across devices*.
 
 **IE/Edge** - Dunno, please contact me or create an issue if you know.
