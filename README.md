@@ -97,3 +97,7 @@ TODO: Because security
 and is therefore *retained across devices*.
 
 **IE/Edge** - Dunno, please contact me or create an issue if you know.
+
+## Demo
+
+TODO: Need a wildcard SSL cert ($$$) Care to donate to the cause? BTC: ```17FJJYY2B11Bx7xx5HepjJ3xAdaB14UMiw```
