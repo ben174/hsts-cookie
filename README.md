@@ -36,15 +36,53 @@ this example has 1's in the positions of 0, 10 and 22, I'd request three URLs ov
 I can now guarantee that subsequent visits to the http version of this URL will be redirected to https.
 
 On the next request, I instruct the client to visit all 24 URLs.
+```javascript
+// simplified for clarity
+for(var i=0;i<24;i++) {                                                 
+    var url = 'http://' + i + '.bugben.com/h.gif';     
+    bitArray[i] = hsts.httpGet(url)   // returns true if the request was a redirect
+}
+```        
 
-    // simplified for clarity
-    for(var i=0;i<24;i++) {                                                 
-        var url = 'http://' + i + '.bugben.com/h.gif';     
-        bitArray[i] = hsts.httpGet(url)   // returns true if the request was a redirect
-    }
-        
-I now have a bit array with 1's for each URL which was redirected. I then reconstruct that bit array
-into a integer again, and bam - I've retrieved your fingerprint.
+| Requested URL                | Was Redirected | Bit |                         
+| ---------------------------- | -------------- | --- |                         
+| http://w00.bugben.com/a.gif  | **True**       | 1   |                         
+| http://w01.bugben.com/a.gif  | False          | 0   |                         
+| http://w02.bugben.com/a.gif  | False          | 0   |                         
+| http://w03.bugben.com/a.gif  | False          | 0   |                         
+| http://w04.bugben.com/a.gif  | False          | 0   |                         
+| http://w05.bugben.com/a.gif  | False          | 0   |                         
+| http://w06.bugben.com/a.gif  | False          | 0   |                         
+| http://w07.bugben.com/a.gif  | False          | 0   |                         
+| http://w08.bugben.com/a.gif  | False          | 0   |                         
+| http://w09.bugben.com/a.gif  | False          | 0   |                         
+| http://w10.bugben.com/a.gif  | **True**       | 1   |                         
+| http://w11.bugben.com/a.gif  | False          | 0   |                         
+| http://w12.bugben.com/a.gif  | False          | 0   |                         
+| http://w13.bugben.com/a.gif  | False          | 0   |                         
+| http://w14.bugben.com/a.gif  | False          | 0   |                         
+| http://w15.bugben.com/a.gif  | False          | 0   |                         
+| http://w16.bugben.com/a.gif  | False          | 0   |                         
+| http://w17.bugben.com/a.gif  | False          | 0   |                         
+| http://w18.bugben.com/a.gif  | False          | 0   |                         
+| http://w19.bugben.com/a.gif  | False          | 0   |                         
+| http://w20.bugben.com/a.gif  | False          | 0   |                         
+| http://w21.bugben.com/a.gif  | False          | 0   |                         
+| http://w22.bugben.com/a.gif  | **True**       | 1   |                         
+| http://w23.bugben.com/a.gif  | False          | 0   | 
+
+I now have a bit array with 1's for each URL which was redirected. 
+
+    [1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0]
+
+I then reconstruct that bit array into a integer again, and bam - I've retrieved your fingerprint.
+
+    100000000010000000000100 = 8396804
+    
+## Why it won't be fixed
+
+TODO: Because security
+
 
 ## Where it works
 
