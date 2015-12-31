@@ -44,6 +44,9 @@ for(var i=0;i<24;i++) {
 }
 ```        
 
+I determine whether the requests were redirected by the browser, and create a bit 
+array with that information.
+
 | Requested URL                | Was Redirected | Bit |                         
 | ---------------------------- | -------------- | --- |                         
 | http://w00.bugben.com/a.gif  | **True**       | 1   |                         
@@ -71,7 +74,7 @@ for(var i=0;i<24;i++) {
 | http://w22.bugben.com/a.gif  | **True**       | 1   |                         
 | http://w23.bugben.com/a.gif  | False          | 0   | 
 
-I now have a bit array with 1's for each URL which was redirected. 
+Starting to look familiar?
 
     [1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0]
 
