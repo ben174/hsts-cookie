@@ -15,6 +15,13 @@ requests to this particular URL over HTTPS, even if the original request was mad
 using HTTP. When a browser receives a HSTS instruction, that instruction is retained
 no matter what. *Even if you go incognito or private.*
 
+## Why I made this
+
+This HSTS vulnerability has been known about for a while, and - while others have
+implemented it - I've yet to see someone make the code available. I've always thought
+that the more transparent a vulnerability is, the more likely it is to be addressed. 
+How this one is addressed is another question.
+
 ## How I implemented it
 
 It's actually kind of simple. I've created a very basic web server `hsts.py` which 
