@@ -2,7 +2,7 @@
 #### Proof of Concept - Created by Ben Friedland
 ##### http://www.bugben.com
 
-Creates a HSTS Supercookie to fingerprint a browser
+Creates an HSTS Supercookie to fingerprint a browser
 
 This is a proof of concept self-hosted application which will lay a "super cookie"
 using the HSTS web standard. 
@@ -12,7 +12,7 @@ using the HSTS web standard.
 HTTP Strict Transport Security (HSTS) is a web security standard implemented 
 by browsers via a Response header which instructs the browser to send subsequent 
 requests to this particular URL over HTTPS, even if the original request was made
-using HTTP. When a browser receives a HSTS instruction, that instruction is retained
+using HTTP. When a browser receives an HSTS instruction, that instruction is retained
 no matter what. *Even if you go incognito or private.*
 
 ## Why I made this
@@ -99,7 +99,7 @@ Starting to look familiar?
 
     [1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0]
 
-I then reconstruct that bit array into a integer again, and bam - I've retrieved your fingerprint.
+I then reconstruct that bit array into an integer again, and bam - I've retrieved your fingerprint.
 
     100000000010000000000100 == 8396804
     
