@@ -126,4 +126,7 @@ and is therefore *retained across devices*.
 
 ## Demo
 
-TODO: I need a wildcard SSL cert ($$$) to host a live demo. Care to donate to the cause? BTC: ```17FJJYY2B11Bx7xx5HepjJ3xAdaB14UMiw```
+I will create a live demo with a [Let's Encrypt Wildcart cert](https://community.letsencrypt.org/t/acme-v2-and-wildcard-certificate-support-is-live/55579/) to host it soon. 
+
+
+If you liked this piece of information on the internet, please care to donate to the cause? BTC: ```17FJJYY2B11Bx7xx5HepjJ3xAdaB14UMiw```
